@@ -1,2 +1,4 @@
-# olgado
-Hackaton 2.0
+# Olgado
+</hr>
+
+<p>Projeto com foco em facilitar a logística de compra e venda de bovinos.</p>
