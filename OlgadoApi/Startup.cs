@@ -9,6 +9,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Olgado.Domain.Repositorio;
+using Olgado.Infra.Respositorio;
 
 namespace OlgadoApi
 {
@@ -24,6 +26,8 @@ namespace OlgadoApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTransient<IRacaRepositorio, RacaRepositorio>();
+            services.AddTransient<IClassificacaoRepositorio, ClassificacaoRepositorio>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
@@ -34,7 +38,7 @@ namespace OlgadoApi
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            
             app.UseMvc();
         }
     }

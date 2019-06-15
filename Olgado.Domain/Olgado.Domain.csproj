@@ -8,4 +8,8 @@
     <ProjectReference Include="..\Olgado.Shared\Olgado.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Commands\ClassificacaoContext\" />
+  </ItemGroup>
+
 </Project>
