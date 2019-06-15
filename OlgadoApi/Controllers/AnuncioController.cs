@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Primitives;
 using Olgado.Domain.Commands.AnuncioContext;
 using Olgado.Domain.Commands.ClassificacaoContext;
+using Olgado.Domain.Entidades;
 using Olgado.Domain.Repositorio;
 
 namespace OlgadoApi.Controllers
@@ -22,13 +25,27 @@ namespace OlgadoApi.Controllers
 
         // GET api/Anuncio
         [HttpGet]
-        public IActionResult Get(string nome = null)
+        public IActionResult Get()
         {
-        
             var lista = AnuncioServico.Query();
-            if (!string.IsNullOrEmpty(nome))
-                lista = lista.Where(x => x.Descricao.ToLower().Contains(nome.ToLower()));
+            FiltroAnuncio(Request.Query,ref lista);
             return Ok(lista);
+        }
+
+        private void FiltroAnuncio(IQueryCollection query, ref IEnumerable<Anuncio> anuncio)
+        {
+            if (query.TryGetValue("Descricao", out StringValues descricaoFiltro))
+            {
+                var descricao = descricaoFiltro[0];
+                anuncio = anuncio.Where(x => x.Descricao.Contains(descricao));
+            }
+            if (query.TryGetValue("Valor", out StringValues valorFilro))
+            {
+                string[] range = valorFilro[0].Split('-');
+                var valor1 = decimal.Parse(range[0]);
+                var valor2 = decimal.Parse(range[1]);
+                anuncio = anuncio.Where(x => x.Valor>= valor1 && x.Valor<=valor2);
+            }
         }
     }
 }

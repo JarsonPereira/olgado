@@ -8,7 +8,7 @@ using System.Linq;
 
 namespace Olgado.Infra.Respositorio
 {
-    class AnuncioRepositorio : IAnuncioRepositorio
+    public class AnuncioRepositorio : IAnuncioRepositorio
     {
         public static List<Anuncio> anuncios = new List<Anuncio>();
         private readonly IDb _Db;
