@@ -2,11 +2,12 @@
 using Olgado.Domain.Repositorio;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Olgado.Infra.Respositorio
 {
-    public class RacaRepositorio : IRacaRepositorio, IDisposable
+    public class RacaRepositorio : IRacaRepositorio
     {
 
         public IEnumerable<Raca> ObterTodos()
@@ -48,12 +49,8 @@ namespace Olgado.Infra.Respositorio
             racas.Add(new Raca("Jersolando"));
             #endregion
 
-            return racas;
+            return racas.OrderBy(x=>x.Descricao);
         }
 
-        public void Dispose()
-        {
-            GC.SuppressFinalize(this);
-        }
     }
 }
