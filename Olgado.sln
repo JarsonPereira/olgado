@@ -3,21 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.271
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02-Olgado.Domain", "02-Olgado.Domain", "{17BBCD03-55C9-4646-95B9-AF613FA556CB}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - Olgado.Domain", "01 - Olgado.Domain", "{17BBCD03-55C9-4646-95B9-AF613FA556CB}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03-Olgado.Infra", "03-Olgado.Infra", "{954C1B68-F058-494F-A336-558A393AE34D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - Olgado.Infra", "03 - Olgado.Infra", "{954C1B68-F058-494F-A336-558A393AE34D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Olgado.Domain", "Olgado.Domain\Olgado.Domain.csproj", "{08CCC40D-A63A-4EDA-B37A-A1DB7960745B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Olgado.Infra", "Olgado.Infra\Olgado.Infra.csproj", "{7B0DF4B3-6D1D-4361-BF25-B422D599F518}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01-Olgado.Shared", "01-Olgado.Shared", "{F49284CD-3727-4C30-82CA-30AEF54D14A0}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - Olgado.Shared", "02 - Olgado.Shared", "{F49284CD-3727-4C30-82CA-30AEF54D14A0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Olgado.Shared", "Olgado.Shared\Olgado.Shared.csproj", "{A191E0C5-163B-4070-863F-2E561E6A5F04}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04-OlgadoApi", "04-OlgadoApi", "{21232B24-0183-4E60-93B9-3671A9575FF1}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 - Olgado.Api", "04 - Olgado.Api", "{21232B24-0183-4E60-93B9-3671A9575FF1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OlgadoApi", "OlgadoApi\OlgadoApi.csproj", "{F3C20683-BC80-4664-A8C0-D46B836CDECF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05 - Olgado.Web", "05 - Olgado.Web", "{EE22EAC5-7DF7-43CF-97A0-515654519223}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OlgadoWeb", "OlgadoWeb\OlgadoWeb.csproj", "{B5EC0044-CC6F-4666-BA8F-0A7D6B5F748F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +45,10 @@ Global
 		{F3C20683-BC80-4664-A8C0-D46B836CDECF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3C20683-BC80-4664-A8C0-D46B836CDECF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3C20683-BC80-4664-A8C0-D46B836CDECF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5EC0044-CC6F-4666-BA8F-0A7D6B5F748F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5EC0044-CC6F-4666-BA8F-0A7D6B5F748F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5EC0044-CC6F-4666-BA8F-0A7D6B5F748F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5EC0044-CC6F-4666-BA8F-0A7D6B5F748F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +58,7 @@ Global
 		{7B0DF4B3-6D1D-4361-BF25-B422D599F518} = {954C1B68-F058-494F-A336-558A393AE34D}
 		{A191E0C5-163B-4070-863F-2E561E6A5F04} = {F49284CD-3727-4C30-82CA-30AEF54D14A0}
 		{F3C20683-BC80-4664-A8C0-D46B836CDECF} = {21232B24-0183-4E60-93B9-3671A9575FF1}
+		{B5EC0044-CC6F-4666-BA8F-0A7D6B5F748F} = {EE22EAC5-7DF7-43CF-97A0-515654519223}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C7B197F3-ADD8-4809-9708-A049E99A2BBE}

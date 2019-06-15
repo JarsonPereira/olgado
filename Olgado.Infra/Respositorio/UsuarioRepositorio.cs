@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace Olgado.Infra.Respositorio
 {
-    public class UsuarioRepositorio : IUsuarioRepositorio
+    public class UsuarioRepositorio 
     {
 
         private readonly IDb _Db;
@@ -83,7 +83,7 @@ namespace Olgado.Infra.Respositorio
                     Email = usuario.Email,
                     Telefone = usuario.Telefone,
                     InformacoesContato = usuario.InformacoesContato,
-                    PerfilCompra = usuario.PerfilCompra,
+                   // PerfilCompra = usuario.PerfilCompra,
                     PerfilVenda = usuario.PerfilVenda
 
                 });
