@@ -1,4 +1,5 @@
-﻿using Olgado.Domain.Entidades;
+﻿using Dapper;
+using Olgado.Domain.Entidades;
 using Olgado.Domain.Repositorio;
 using Olgado.Infra.Contexto;
 using System;
@@ -32,7 +33,48 @@ namespace Olgado.Infra.Respositorio
 
         public void Salvar(Anuncio anuncio)
         {
-            throw new NotImplementedException();
+            using (var con = _Db.GetCon())
+            {
+                string sql = @"Insert Into Anuncio" +
+                              "(Id" +
+                            ",IdUsuario" +
+                            ",Descricao" +
+                            ",Localizacao" +
+                            "Valor)"+
+                            "VALUES" +
+                             "(@Id" +
+                            ",@IdUsuario" +
+                            ",@Descricao" +
+                            ",@Localizacao" +
+                            ",@Valor);" +
+                            "Insert Into Animal" +
+                              "(Id" +
+                            ",Raca" +
+                            ",Filiacao" +
+                            ",Arroba" +
+                            ",Quantidade" +
+                            ",Valor" +
+                            ",Peso)"+
+                            "VALUES" +
+                             "(@Id" +
+                            ",@Raca" +
+                            ",@Filiacao" +
+                            ",@Arroba" +
+                            ",@Quantidade" +
+                            ",@Valor)";
+                con.Execute(sql, new
+                {
+                    Id = anuncio.ID,
+                    IdUsuario = anuncio.IDUsuario,
+                    Descricao = anuncio.Descricao,
+                    Localizacao = anuncio.Localizacao,
+                    Valor = anuncio.Valor,
+
+
+
+                });
+            }
         }
     }
+
 }
