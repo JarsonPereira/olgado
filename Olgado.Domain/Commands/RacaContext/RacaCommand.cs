@@ -7,7 +7,7 @@ using Olgado.Shared.Command;
 
 namespace Olgado.Domain.Commands.RacaContext
 {
-    public class RacaCommand 
+    public class RacaCommand
     {
         public IRacaRepositorio RacaRepositorio;
 
@@ -16,9 +16,9 @@ namespace Olgado.Domain.Commands.RacaContext
             RacaRepositorio = racaRepositorio;
         }
 
-        public IEnumerable<Raca> Query(RacaFiltroRequest input)
+        public IEnumerable<Raca> Query()
         {
-           return RacaRepositorio.ObterTodos().Where(input.FiltroRaca);
+            return RacaRepositorio.ObterTodos();
         }
     }
 }

@@ -15,9 +15,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Olgado.Domain\Olgado.Domain.csproj" />
-    <ProjectReference Include="..\Olgado.Infra\Olgado.Infra.csproj" />
-    <ProjectReference Include="..\Olgado.Shared\Olgado.Shared.csproj" />
+    <Reference Include="Olgado.Domain">
+      <HintPath>..\Olgado.Domain\obj\Debug\netcoreapp2.1\Olgado.Domain.dll</HintPath>
+    </Reference>
+    <Reference Include="Olgado.Infra">
+      <HintPath>..\Olgado.Infra\obj\Debug\netcoreapp2.1\Olgado.Infra.dll</HintPath>
+    </Reference>
+    <Reference Include="Olgado.Shared">
+      <HintPath>..\Olgado.Shared\obj\Debug\netcoreapp2.1\Olgado.Shared.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Olgado.Infra.Respositorio
 {
-    public class ClassificacaoRepositorio : IClassificacaoRepositorio,IDisposable
+    public class ClassificacaoRepositorio : IClassificacaoRepositorio
     {
 
         public IEnumerable<Classificacao> ObterTodos()
@@ -29,10 +29,6 @@ namespace Olgado.Infra.Respositorio
             return classificacoes;
         }
 
-        public void Dispose()
-        {
-            GC.SuppressFinalize(this); ;
-        }
 
     }
 }

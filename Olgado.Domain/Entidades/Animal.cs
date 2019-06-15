@@ -5,10 +5,10 @@ namespace Olgado.Domain.Entidades
 {
     public class Animal:Entidade
     {
-        public Animal(Raca raca, Filiacao filiacao, string arroba, decimal quantidade, decimal valor, decimal peso)
+        public Animal(Raca raca, Classificacao classificacao, string arroba, decimal quantidade, decimal valor, decimal peso)
         {
             Raca = raca;
-            Filiacao = filiacao;
+            Classificacao = classificacao;
             Arroba = arroba;
             Quantidade = quantidade;
             Valor = valor;
@@ -16,7 +16,7 @@ namespace Olgado.Domain.Entidades
         }
 
         public Raca Raca { get; private set; }
-        public Filiacao Filiacao { get; private set; }
+        public Classificacao Classificacao { get; private set; }
         public string Arroba { get; private set; }
         public decimal Quantidade { get; set; }
         public decimal Valor { get; private set; }

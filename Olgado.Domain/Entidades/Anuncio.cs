@@ -9,6 +9,20 @@ namespace Olgado.Domain.Entidades
 {
     public class Anuncio:Entidade
     {
+        public Anuncio(string descricao, List<string> imagensUrl, Localizacao localizacao, Animal animal, decimal valor, TipoAnuncio tipo)
+        {
+          
+            Descricao = descricao;
+            ImagensUrl = imagensUrl;
+            Localizacao = localizacao;
+            Animal = animal;
+            Valor = valor;
+            Tipo = tipo;
+        }
+        public Anuncio()
+        {
+
+        }
         public Guid IDUsuario { get; private set; }
         public string Descricao { get; private set; }
         public List<string> ImagensUrl { get; private set; }
