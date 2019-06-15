@@ -1,8 +1,5 @@
 ﻿using Olgado.Domain.ValueObjects;
 using Olgado.Shared.Entidades;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Olgado.Domain.Entidades
 {

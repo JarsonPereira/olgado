@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Olgado.Domain", "Olgado.Dom
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Olgado.Infra", "Olgado.Infra\Olgado.Infra.csproj", "{7B0DF4B3-6D1D-4361-BF25-B422D599F518}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Olgado.Api", "Olgado.Api\Olgado.Api.csproj", "{8CD44255-F135-4449-B40F-1543B73616F0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{7B0DF4B3-6D1D-4361-BF25-B422D599F518}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B0DF4B3-6D1D-4361-BF25-B422D599F518}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B0DF4B3-6D1D-4361-BF25-B422D599F518}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CD44255-F135-4449-B40F-1543B73616F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CD44255-F135-4449-B40F-1543B73616F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CD44255-F135-4449-B40F-1543B73616F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CD44255-F135-4449-B40F-1543B73616F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -43,6 +49,7 @@ Global
 		{A4D80FE3-4755-4202-89C1-01B7C1E4A7F6} = {6CED499F-AA9E-495F-9414-669BCAB28BD0}
 		{08CCC40D-A63A-4EDA-B37A-A1DB7960745B} = {17BBCD03-55C9-4646-95B9-AF613FA556CB}
 		{7B0DF4B3-6D1D-4361-BF25-B422D599F518} = {954C1B68-F058-494F-A336-558A393AE34D}
+		{8CD44255-F135-4449-B40F-1543B73616F0} = {07BC854E-8745-4A4D-8BA2-7A17CDE3833A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C7B197F3-ADD8-4809-9708-A049E99A2BBE}
