@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // As informações gerais sobre um assembly são controladas através do seguinte
 // conjunto de atributos a seguir. Altere esses valores de atributo para modificar as informações
 // associadas a um assembly.
-[assembly: AssemblyTitle("OlgadoWeb")]
+[assembly: AssemblyTitle("OlgadoUI")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("OlgadoWeb")]
+[assembly: AssemblyProduct("OlgadoUI")]
 [assembly: AssemblyCopyright("Copyright © Microsoft 2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // A GUID a seguir será referente à ID do typelib se este projeto for exposto ao COM
-[assembly: Guid("fb60656e-224d-4509-82d6-7b275771cfc2")]
+[assembly: Guid("9ee8e4b2-c5dc-4619-857d-7a3edc448d7a")]
 
 // As informações de versão de um assembly consistem nos seguintes quatro valores:
 //
