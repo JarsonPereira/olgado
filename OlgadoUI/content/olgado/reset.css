@@ -16,6 +16,32 @@ body .container {
     width: 86%;
 }
 
+body .btn {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background-color: #025939;
+    text-align: center;
+    letter-spacing: .5px;
+    transition: .2s ease-out;
+    cursor: pointer;
+    border: none;
+    border-radius: 50px;
+    display: inline-block;
+    height: 44px;
+    line-height: 44px;
+    outline: 0;
+    padding: 0 2.2rem;
+    text-transform: uppercase;
+    vertical-align: middle;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body .btn:hover {
+    background-color: #00422a;
+}
+
 @media only screen and (min-width: 425px) {
     .wrapper-container {
         margin: 0 auto;
