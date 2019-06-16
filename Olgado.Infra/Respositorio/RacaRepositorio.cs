@@ -9,10 +9,10 @@ namespace Olgado.Infra.Respositorio
 {
     public class RacaRepositorio : IRacaRepositorio
     {
-
         public IEnumerable<Raca> ObterTodos()
         {
             List<Raca> racas = new List<Raca>();
+
             #region Racas
             racas.Add(new Raca("Aberdeen Angus"));
             racas.Add(new Raca("Outros"));
@@ -51,6 +51,5 @@ namespace Olgado.Infra.Respositorio
 
             return racas.OrderBy(x=>x.Descricao);
         }
-
     }
 }
