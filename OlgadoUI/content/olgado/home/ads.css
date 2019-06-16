@@ -1,0 +1,30 @@
+﻿.card {
+    display: flex;
+    flex-direction: row;
+}
+
+.card-image {
+    width: 42%;
+}
+
+.ad-container .card .card-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #444 !important;
+    line-height: 24px !important;
+}
+
+.card-content .local {
+    color: #666 !important;
+    margin-top: 4px !important;
+}
+
+.card-action {
+    padding: 15px;
+}
+
+.card-action .price {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #333 !important;
+}
