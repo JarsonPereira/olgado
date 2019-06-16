@@ -133,6 +133,9 @@
     <Content Include="Content\materialize\css\materialize.min.css" />
     <Content Include="Content\materialize\font\material-design-icons\LICENSE.txt" />
     <Content Include="Content\materialize\font\material-design-icons\Material-Design-Icons.svg" />
+    <Content Include="Content\olgado\home\ads.css" />
+    <Content Include="Content\olgado\home\filters.css" />
+    <Content Include="Content\olgado\img\noticias_1406498394.jpg" />
     <Content Include="Content\olgado\img\olgado-logotipo-01.png" />
     <Content Include="Content\olgado\img\olgado-logotipo-02.png" />
     <Content Include="Content\olgado\reset.css" />
@@ -198,6 +201,8 @@
     <Content Include="Scripts\materialize\materialize.js" />
     <Content Include="Scripts\materialize\materialize.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\nouislider.min.js" />
+    <Content Include="Scripts\olgado\scripts.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -216,7 +221,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Scripts\olgado\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

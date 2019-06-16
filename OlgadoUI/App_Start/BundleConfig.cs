@@ -9,6 +9,10 @@ namespace OlgadoUI
         {
             BundleTable.EnableOptimizations = true;
 
+            bundles.Add(new StyleBundle("~/materialize/css").IncludeDirectory("~/Content/materialize", "*.css", true));
+
+            bundles.Add(new StyleBundle("~/olgado/css").IncludeDirectory("~/Content/olgado", "*.css", true));
+
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
 
@@ -21,10 +25,6 @@ namespace OlgadoUI
             bundles.Add(new ScriptBundle("~/bundles/materialize").IncludeDirectory("~/Scripts/materialize", "*.js", true));
 
             bundles.Add(new ScriptBundle("~/bundles/olgado").IncludeDirectory("~/Scripts/olgado", "*.js", true));
-
-            bundles.Add(new StyleBundle("~/materialize/css").IncludeDirectory("~/Content/materialize", "*.css", true));
-
-            bundles.Add(new StyleBundle("~/olgado/css").IncludeDirectory("~/Content/olgado", "*.css", true));
         }
     }
 }
