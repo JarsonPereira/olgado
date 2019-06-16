@@ -13,5 +13,9 @@ namespace OlgadoUI.Controllers
             return View();  
         }
 
+        public ActionResult Anunciar()
+        {
+            return View();
+        }
     }
 }

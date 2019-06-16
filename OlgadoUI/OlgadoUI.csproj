@@ -126,6 +126,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Anuncio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -137,6 +138,9 @@
     <Content Include="Content\olgado\home\filters.css" />
     <Content Include="Content\olgado\img\boi-01.jpg" />
     <Content Include="Content\olgado\img\boi-02.jpg" />
+    <Content Include="Content\olgado\img\boi-04.jpg" />
+    <Content Include="Content\olgado\img\boi-05.jpg" />
+    <Content Include="Content\olgado\img\boi-06.jpg" />
     <Content Include="Content\olgado\img\olgado-logotipo-01.png" />
     <Content Include="Content\olgado\img\olgado-logotipo-02.png" />
     <Content Include="Content\olgado\reset.css" />
@@ -189,6 +193,8 @@
     <Content Include="Content\materialize\fonts\roboto\Roboto-Bold.woff" />
     <Content Include="Content\materialize\fonts\roboto\Roboto-Bold.ttf" />
     <Content Include="Content\materialize\fonts\roboto\Roboto-Bold.eot" />
+    <None Include="Properties\PublishProfiles\olgado - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\olgado - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -220,10 +226,10 @@
     <Content Include="Views\Shared\_Header.cshtml" />
     <Content Include="Views\Shared\_Search.cshtml" />
     <Content Include="Views\Home\Detalhes.cshtml" />
+    <Content Include="Views\Home\Anunciar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

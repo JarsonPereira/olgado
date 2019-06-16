@@ -1,0 +1,117 @@
+﻿@model OlgadoUI.Models.Anuncio
+
+@{
+    /**/
+
+    ViewBag.Title = "Anunciar";
+}
+<form action="Anunciar" method="post" enctype="multipart/form-data">
+    <div>
+
+        <div>
+            <label>Descricao</label>
+            <div>
+                <input type="text" name="Descricao" />
+            </div>
+        </div>
+        <div>
+            <label>Quantidade</label>
+            <div>
+                <input type="text" name="Quantidade" />
+            </div>
+        </div>
+
+        <div>
+            <label>Valor Unitário</label>
+            <div>
+                <input type="text" />
+            </div>
+        </div>
+        <div>
+            <label>Foto</label>
+            <div>
+
+                <a id="botaocamera" class="waves-effect waves-light btn"><i class="material-icons left">camera_alt</i>Fotos</a>
+
+            </div>
+        </div>
+        <label>Valor por cabeça</label>
+        <div>
+            <input type="text" />
+        </div>
+        <label>Raça</label>
+        <div>
+            <input type="text" />
+        </div>
+    </div>
+
+
+    <div>
+       
+        <div>
+            <div id="map" style="width:100%;height:400px;"></div>
+        </div>
+
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Salvar" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+<div class="fixed-action-btn">
+    <a class="btn-floating btn-large">
+        <i class="large material-icons green">add_circle_outline</i>
+    </a>
+   
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script>
+        BuscarFazenda();
+        function BuscarFazenda() {
+
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            }
+
+        };
+   
+        function showPosition(position) {
+          
+            let latitude = position.coords.latitude;
+            let longitude = position.coords.longitude;
+            console.log(latitude);
+            console.log(longitude);
+           
+        }
+
+        
+     
+
+        function initMap(latitude) {
+          
+
+            var uluru = { lat: -7.1963691999999995, lng: -48.205842999999994 };
+            // The map, centered at Uluru
+            var map = new google.maps.Map(
+                document.getElementById('map'), { zoom: 16, center: uluru });
+            // The marker, positioned at Uluru
+            var marker = new google.maps.Marker({ position: uluru, map: map });
+        }
+
+        $(document).ready(function () {
+            $('.fixed-action-btn').floatingActionButton();
+        });
+
+    </script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZ3DZNPvaA0U0-6qVxEgJkXzv65kvDou0&callback=initMap">
+
+    </script>
+
+
+
+}
