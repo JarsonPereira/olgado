@@ -2,7 +2,7 @@
     ViewBag.Title = "Início";
 }
 
-<div class="wrapper-container">
+<div class="wrapper-container" ng-controller="olgadoController">
     <div class="container">
         <div class="wrapper-content">
             <div class="filters-container">
@@ -42,7 +42,7 @@
                             </div>
                             <div class="card-stacked">
                                 <div class="card-content">
-                                    <span class="card-title activator grey-text text-darken-4">Boi nelore gordão</span>
+                                    <span class="card-title activator grey-text text-darken-4">Boi nelore gordão {{nome}}</span>
                                     <p class="local">@*<i class="material-icons left">place</i>*@Araguaína - TO</p>
                                 </div>
                                 <div class="card-action">

@@ -202,6 +202,7 @@
     <Content Include="Scripts\materialize\materialize.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\nouislider.min.js" />
+    <Content Include="Scripts\olgado\app.js" />
     <Content Include="Scripts\olgado\scripts.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
