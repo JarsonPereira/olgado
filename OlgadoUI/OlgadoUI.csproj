@@ -135,7 +135,7 @@
     <Content Include="Content\materialize\font\material-design-icons\Material-Design-Icons.svg" />
     <Content Include="Content\olgado\home\ads.css" />
     <Content Include="Content\olgado\home\filters.css" />
-    <Content Include="Content\olgado\img\noticias_1406498394.jpg" />
+    <Content Include="Content\olgado\img\boi-01.jpg" />
     <Content Include="Content\olgado\img\olgado-logotipo-01.png" />
     <Content Include="Content\olgado\img\olgado-logotipo-02.png" />
     <Content Include="Content\olgado\reset.css" />
@@ -217,6 +217,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_Header.cshtml" />
     <Content Include="Views\Shared\_Search.cshtml" />
+    <Content Include="Views\Home\Detalhes.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

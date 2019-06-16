@@ -19,8 +19,8 @@
     margin-top: 4px !important;
 }
 
-.card-action {
-    padding: 15px;
+.ad-container .card .card-action {
+    padding: 10px 20px 10px 20px;
 }
 
 .card-action .price {
