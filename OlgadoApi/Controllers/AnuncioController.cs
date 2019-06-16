@@ -29,23 +29,29 @@ namespace OlgadoApi.Controllers
         {
             var lista = AnuncioServico.Query();
             FiltroAnuncio(Request.Query,ref lista);
+
             return Ok(lista);
         }
 
-        private void FiltroAnuncio(IQueryCollection query, ref IEnumerable<Anuncio> anuncio)
+
+
+        private void FiltroAnuncio(IQueryCollection query, ref IEnumerable<AnuncioResponse> anuncio)
         {
             if (query.TryGetValue("Descricao", out StringValues descricaoFiltro))
             {
                 var descricao = descricaoFiltro[0];
                 anuncio = anuncio.Where(x => x.Descricao.Contains(descricao));
             }
-            if (query.TryGetValue("Valor", out StringValues valorFilro))
-            {
-                string[] range = valorFilro[0].Split('-');
-                var valor1 = decimal.Parse(range[0]);
-                var valor2 = decimal.Parse(range[1]);
-                anuncio = anuncio.Where(x => x.Valor>= valor1 && x.Valor<=valor2);
-            }
+            //if (query.TryGetValue("Valor", out StringValues valorFilro))
+            //{
+            //    string[] range = valorFilro[0].Split('-');
+            //    var valor1 = decimal.Parse(range[0]);
+            //    var valor2 = decimal.Parse(range[1]);
+            //    anuncio = anuncio.Where(x => x.Preco>= valor1 && x.Valor<=valor2);
+            //}
         }
+
+       
     }
+  
 }

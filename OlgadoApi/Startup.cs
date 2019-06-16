@@ -29,6 +29,7 @@ namespace OlgadoApi
             services.AddTransient<IRacaRepositorio, RacaRepositorio>();
             services.AddTransient<IClassificacaoRepositorio, ClassificacaoRepositorio>();
             services.AddTransient<IAnuncioRepositorio,AnuncioRepositorio>();
+            services.AddCors();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
@@ -39,7 +40,7 @@ namespace OlgadoApi
             {
                 app.UseDeveloperExceptionPage();
             }
-            
+            app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin().AllowCredentials());
             app.UseMvc();
         }
     }

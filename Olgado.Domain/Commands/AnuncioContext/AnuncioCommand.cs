@@ -16,9 +16,30 @@ namespace Olgado.Domain.Commands.AnuncioContext
             AnuncioRepositorio = _AnuncioRepositorio;
         }
 
-        public IEnumerable<Anuncio> Query()
+        public IEnumerable<AnuncioResponse> Query()
         {
-            return AnuncioRepositorio.ListarTodos();
+            List<AnuncioResponse> anuncios = new List<AnuncioResponse>();
+            foreach (var item in AnuncioRepositorio.ListarTodos())
+            {
+                anuncios.Add(new AnuncioResponse
+                {
+                    Cidade = item.Localizacao.Municipio,
+                    UF = item.Localizacao.UF,
+                    Descricao = item.Descricao,
+                    Imagem = item.ImagensUrl.FirstOrDefault(),
+                    Preco = item.Valor.ToString("F2")
+                });
+            }
+            return anuncios;
         }
+    }
+
+    public class AnuncioResponse
+    {
+        public string Descricao { get; set; }
+        public string Imagem { get; set; }
+        public string Cidade { get; set; }
+        public string UF { get; set; }
+        public string Preco { get;  set; }
     }
 }

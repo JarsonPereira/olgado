@@ -10,32 +10,31 @@ namespace Olgado.Infra.Respositorio
 {
     public class AnuncioRepositorio : IAnuncioRepositorio
     {
-        public static List<Anuncio> anuncios = new List<Anuncio>();
-        private readonly IDb _Db;
-
-        public AnuncioRepositorio()
+        public static List<Anuncio> anuncios = new List<Anuncio>()
         {
-            anuncios.Add(new Anuncio("Vendo 300 cabeças de gado",
-                new List<string>() { "https://blog.superbid.net/wp-content/uploads/2018/08/leila-de-gado.png" },new Domain.ValueObjects.Localizacao()
+            new Anuncio("5 cabeças",
+                new List<string>() { "/Content/olgado/img/boi-01.jpg" },new Domain.ValueObjects.Localizacao()
                 {
                     CEP= "7782390",
                     UF="TO",
                     Municipio="Araguaina"
                 }
-                , new Animal(new Raca("Nelore"), new Classificacao("Gado"), "90@", 300, 899.99M, 120.200M), (899.99M * 300), Domain.Enum.TipoAnuncio.Gratuito)
-                );
-
-            anuncios.Add(new Anuncio("Vendo 200 cabeças de gado",   
-               new List<string>() { "https://blog.superbid.net/wp-content/uploads/2018/08/leila-de-gado.png" },
+                , new Animal(new Raca("Nelore"), new Classificacao("Gado"), "90@", 3, 899.99M, 120.200M), (899.99M * 3), Domain.Enum.TipoAnuncio.Gratuito),
+            new Anuncio("200 cabeças de gado Nelore",
+               new List<string>() { "/Content/olgado/img/boi-02.jpg" },
                new Domain.ValueObjects.Localizacao()
                {
                    CEP = "7782390",
                    UF = "TO",
-                   Municipio = "Araguaina"
+                   Municipio = "Palmas"
                }
-               , new Animal(new Raca("Nelore"),new Classificacao("Gado") ,"90@", 300, 899.99M, 120.200M), 899.99M * 300, Domain.Enum.TipoAnuncio.Gratuito)
-               );
+               , new Animal(new Raca("Nelore"),new Classificacao("Boi") ,"90@", 300, 899.99M, 120.200M), 899.99M * 300, Domain.Enum.TipoAnuncio.Gratuito)
+        };
+        private readonly IDb _Db;
 
+        public AnuncioRepositorio()
+        {
+           
         }
 
         public Anuncio BuscarPorId(Guid id)

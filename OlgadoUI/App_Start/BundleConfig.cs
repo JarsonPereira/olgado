@@ -7,7 +7,7 @@ namespace OlgadoUI
     {
         public static void RegisterBundles(BundleCollection bundles)
         {
-            BundleTable.EnableOptimizations = true;
+           
 
             bundles.Add(new StyleBundle("~/materialize/css").IncludeDirectory("~/Content/materialize", "*.css", true));
 
